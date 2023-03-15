@@ -1,0 +1,42 @@
+// Material icons
+@import 'fonts/material_icons/material-icons.css';
+
+// Text: Font styling
+@font-face {
+    font-family: roboto_thin;
+    src: url('fonts/roboto_thin.ttf');
+}
+
+@font-face {
+    font-family: roboto_reg;
+    src: url('fonts/roboto_reg.ttf');
+}
+
+@font-face {
+    font-family: roboto_heavy;
+    src: url('fonts/roboto_heavy.ttf');
+}
+
+@mixin t-font-reg { font-family: roboto_reg, sans-serif; }
+@mixin t-font-thin { font-family: roboto_thin, sans-serif; }
+@mixin t-font-heavy { font-family: roboto_heavy, sans-serif; }
+
+// Text: Size in PX
+@mixin t-10 { font-size: 10px; }
+@mixin t-12 { font-size: 12px; }
+@mixin t-16 { font-size: 16px; }
+@mixin t-20 { font-size: 20px; }
+@mixin t-24 { font-size: 24px; }
+@mixin t-32 { font-size: 32px; }
+@mixin t-36 { font-size: 36px; }
+@mixin t-48 { font-size: 48px; }
+
+// Text: Alignment
+@mixin t-center { text-align: center; }
+@mixin t-left { text-align: left; }
+@mixin t-right { text-align: right; }
+
+// <a>: No change color on hover
+@mixin t-no-hover {
+    color: currentcolor !important;
+}

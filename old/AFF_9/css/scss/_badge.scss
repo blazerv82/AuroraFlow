@@ -1,0 +1,9 @@
+.badge {
+    @include border-info-small; 
+    @include px-medium;
+    @include t-16;
+    @include d-float-r;
+    
+    display: flex;
+    align-items: center;
+}

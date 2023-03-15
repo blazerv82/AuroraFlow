@@ -1,0 +1,74 @@
+.animate-pulse-hover:hover {
+    animation-name: pulse;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animate-pulse {
+    animation-name: pulse;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animate-pulse-reverse-hover:hover {
+    animation-name: pulse-reverse;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animate-pulse-reverse {
+    animation-name: pulse-reverse;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animate-opaque-hover:hover {
+    animation-name: opaque;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animate-opaque {
+    animation-name: opaque;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes pulse {
+
+    from {
+        filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(50%);
+    }
+}
+
+@keyframes pulse-reverse {
+
+    from {
+        filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(150%);
+    }
+}
+
+@keyframes opaque {
+
+    from {
+        filter: opacity(100%);
+    }
+
+    to {
+        filter: opacity(50%);
+    }
+}

@@ -1,0 +1,143 @@
+// Shadow
+@mixin shadow { box-shadow: 0px 0px 5px $black; }
+@mixin shadow-large { box-shadow: 0px 0px 10px $black; }
+
+// Radius
+@mixin round-none { border-radius: 0em; }
+@mixin round-small { border-radius: 0.25em; }
+@mixin round-medium { border-radius: 0.5em; }
+@mixin round-large { border-radius: 1em; }
+
+@mixin round-small-l { 
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em; 
+}
+
+@mixin round-medium-l { 
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em; 
+}
+
+@mixin round-large-l {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em; 
+}
+
+@mixin round-small-r { 
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em; 
+}
+
+@mixin round-medium-r { 
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em; 
+}
+
+@mixin round-large-r {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em; 
+}
+
+@mixin round-small-t { 
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em; 
+}
+
+@mixin round-medium-t { 
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em; 
+}
+
+@mixin round-large-t {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em; 
+}
+
+@mixin round-small-b { 
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em; 
+}
+
+@mixin round-medium-b { 
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em; 
+}
+
+@mixin round-large-b {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em; 
+}
+
+
+// Display
+@mixin d-none { display: none; }
+
+@mixin d-block { display: block; }
+@mixin d-inline-block { display: inline-block; }
+
+@mixin d-float-r { float: right; }
+@mixin d-float-l { float: left; }
+
+@mixin d-absolute { position: absolute; }
+@mixin d-fixed { position: fixed; }
+
+// Sticky Display
+@mixin d-sticky { 
+    position: sticky; 
+    top: 0;
+}
+
+
+// Flex Display
+@mixin d-flex-center-items { align-items: center; }
+@mixin d-flex-center-self { align-self: center; }
+@mixin d-flex-justify-content { justify-content: center; }
+@mixin d-flex-center { align-items: center; justify-content: center; }
+
+
+@mixin d-flex-column { 
+    display: flex; 
+    flex-direction: column; 
+}
+
+@mixin d-flex-row { 
+    display: flex;
+    flex-direction: row; 
+}
+
+
+// Container/Object: Sizing
+@mixin h-auto { height: 100%; }
+@mixin w-auto { width: 100%; }
+
+
+// Special/Other
+@mixin to-top{
+    @include border-select;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 5px;
+    z-index: 1;
+}
+
+// Containers
+@mixin message-object {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0px;
+
+    display: inline-block;
+
+    border-style: solid;
+    border-width: 3px 10px;
+    border-radius: 0.25em;
+
+    font-size: 32px;
+}
+
+@mixin content-object {
+    @include w-auto;
+    @include px-small;
+}

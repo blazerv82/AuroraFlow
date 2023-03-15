@@ -1,0 +1,93 @@
+.tile-container {
+
+    display: grid;
+    gap: 0.5em 0em;
+    grid-template-columns: repeat(1, 100%);
+
+    @media (min-width: $vm) {
+        grid-template-columns: repeat(2, 50%);
+    }
+    
+    @media (min-width: $vl) {
+        grid-template-columns: repeat(3, 33%);
+    }
+
+    @media (min-width: $vxl) {
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    @media (min-width: $v2xl) {
+        grid-template-columns: repeat(5, 20%);
+    }
+
+    &.-vs {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    &.-vm {
+        grid-template-columns: repeat(2, 50%);
+    }
+    
+    &.-vl {
+        grid-template-columns: repeat(3, 33%);
+    }
+
+    &.-vxl {
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    &.-v2xl {
+        grid-template-columns: repeat(5, 20%);
+    }
+
+    &.-no-gap {
+        gap: 0px 0px;
+
+        .tile {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+}
+
+.tile {
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+
+    &.-row {
+        flex-direction: row;
+    }
+
+
+    .tile-header, .tile-body, .tile-footer, .tile-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tile-image {
+
+        img {
+            width: 100%;
+            object-fit: cover;
+
+            &.-center {
+                height: 250px;
+                width: auto;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            &.-contain {
+                object-fit: contain;
+            }
+
+            &.-short {
+                height: 250px;
+            }
+        }
+    }
+}

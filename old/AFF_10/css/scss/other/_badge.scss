@@ -1,0 +1,28 @@
+.badge-container {
+    display: flex;
+
+    .badge {
+        @include border-thin;
+        @include px-medium;
+        @include round-small;
+       
+        display: flex;
+        align-items: center;
+        font-size: smaller;
+        margin-left: auto;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    .badge-small {
+        @include border-thin;
+        @include px-small;
+        @include py-small;
+
+       
+        display: flex;
+        align-items: center;
+        font-size: smaller;
+        margin-left: 1em;
+    }
+}

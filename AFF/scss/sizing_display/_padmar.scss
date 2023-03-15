@@ -1,0 +1,139 @@
+/* PADDING X */
+@mixin px-none {
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+@mixin px-none-l { padding-left: 0em; }
+@mixin px-none-r { padding-right: 0em; }
+
+@mixin px-small {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+@mixin px-medium {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+@mixin px-large {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+@mixin px-xlarge {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+/* PADDING Y */
+@mixin py-none {
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+
+@mixin py-none-t { padding-top: 0em; }
+@mixin py-none-b { padding-bottom: 0em; }
+
+@mixin py-small {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+@mixin py-medium {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+@mixin py-large {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@mixin py-xlarge {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+/* Margin X */
+@mixin mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin mx-none {
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+@mixin mx-none-l { margin-left: 0em; }
+@mixin mx-none-r { margin-right: 0em; }
+
+@mixin mx-small {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+@mixin mx-medium {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+@mixin mx-large {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+@mixin mx-xlarge {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+/* Margin Y */
+@mixin my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@mixin my-none {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+@mixin my-none-t { margin-top: 0em; }
+
+@mixin my-small {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+@mixin my-medium {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+@mixin my-large {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+@mixin my-xlarge {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+// Margin Bottom
+@mixin mb-none { margin-bottom: 0em; }
+@mixin mb-small { margin-bottom: 0.25em; }
+@mixin mb-medium { margin-bottom: 0.5em; }
+@mixin mb-large { margin-bottom: 1em; }
+@mixin mb-xlarge { margin-bottom: 1.5em; }
+
+// Margin Top
+@mixin mt-none { margin-top: 0em; }
+@mixin mt-auto { margin-top: auto; }
+@mixin mt-small { margin-top: 0.25em; }
+@mixin mt-medium { margin-top: 0.5em; }
+@mixin mt-large { margin-top: 1em; }
+@mixin mt-xlarge { margin-top: 1.5em; }

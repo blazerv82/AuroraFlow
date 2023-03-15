@@ -1,0 +1,7 @@
+.gradient-flowing-forest {
+    border-image: linear-gradient(to top right, $lightgreen, $darkblue) 1;
+}
+
+.gradient-flowing-forest-classic {
+    border-image: linear-gradient($lightgreen, $darkblue) 1;
+}

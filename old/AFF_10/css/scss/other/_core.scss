@@ -1,0 +1,382 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: roboto_reg, sans-serif;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: none;
+}
+
+
+/*//////
+
+    Containers
+    - A collection of objects
+    - Meant to define webpage structure at a top level
+
+//////*/
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spaced-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Medium */
+    @media (min-width: 525px) {
+        max-width: 520px;
+    }
+
+    /* Large */
+    @media (min-width: 950px) {
+        max-width: 945px;
+    }
+
+    /* Xtra Large */
+    @media (min-width: 1366px) {
+        max-width: 1360px;
+    }
+}
+
+
+.container::after, .spaced-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*//////////
+
+    ROW - 8.0 and below
+    - Deprecated; old way of getting a flexbox container, confusing term
+    FLEX-CONTAINER - 9.0 and above
+    - New way of making a flexbox container; self descriptive
+
+/*//////////
+
+.row, .flex-container {
+    @include d-flex-column;
+    flex-wrap: wrap;
+
+    .spaced-object {
+        flex: 1;
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+}
+
+.flex-container-full {
+    @include d-flex-column;
+    flex: 1;
+
+    .spaced-object {
+        flex: 1;
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+}
+
+// Navigation thru webpages
+.nav-container {
+    @include d-none;
+
+    .nav-item { 
+        @include d-block;
+        @include py-large;
+    }
+
+    @media (min-width: 725px) {
+        
+        @include w-auto;
+        @include d-flex-row;
+
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+
+// Footer (bottom bar of webpage)
+.footer-container {
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+}
+
+.nav-item { 
+    @include d-block;
+    @include py-large;
+
+    @media (min-width: 525px) {
+
+        @include d-inline-block;
+    }
+    
+}
+
+.nav-img { 
+    
+    @include d-none; 
+    
+    @media (min-width: 525px) {
+    
+        @include d-block;
+        height: 20px;
+    }
+}
+
+/*//////
+
+    Objects
+    - Any content that is found within a container is an object of said container
+    - Can be anything from text to images
+
+    Any container definition found below will be replaced with object
+    n-container: Deprecated 8.0, Obsolete ???
+    n-object: New 9.0
+
+//////*/
+
+.content-container, .text-container { @include content-object; }
+.section-object, .text-object { @include content-object; }
+
+.image-container, .image-object {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container, .header-object {
+    @include py-medium;
+    @include t-32;
+    @include w-auto;
+
+    text-align: center;
+    border: none;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+
+.alert-container, .message-object { @include message-object; }
+
+.code-container, .code-object {
+    @include message-object;
+    font-family: monospace;
+}
+
+.inline-code-container, .inline-code-object  {
+    @include border-info-small;
+
+    font-family: monospace;
+
+    padding: 0px 5px;
+    display: inline-block;
+}
+
+.to-top { @include to-top; }
+
+// Padding X
+.px-none { @include px-none; }
+.px-small { @include px-small; }
+.px-medium { @include px-medium; }
+.px-large { @include px-large; }
+.px-xlarge { @include px-xlarge; }
+
+.px-none-l { @include px-none-l; }
+.px-none-r { @include px-none-r; }
+
+// Padding Y
+.py-none { @include py-none; }
+.py-small { @include py-small; }
+.py-medium { @include py-medium; }
+.py-large { @include py-large; }
+.py-xlarge { @include py-xlarge; }
+
+.py-none-t { @include py-none-t; }
+.py-none-b { @include py-none-b; }
+
+// Margin X
+.mx-none { @include mx-none; }
+.mx-small { @include mx-small; }
+.mx-medium { @include mx-medium; }
+.mx-large { @include mx-large; }
+.mx-xlarge { @include mx-xlarge; }
+
+.mx-none-l { @include mx-none-l; }
+.mx-none-r { @include mx-none-r; }
+
+// Margin Y
+.my-none { @include my-none; }
+.my-small { @include my-small; }
+.my-medium { @include my-medium; }
+.my-large { @include my-large; }
+.my-xlarge { @include my-xlarge; }
+
+.my-none-t { @include my-none-t; }
+.my-none-b { @include my-none-b; }
+
+// Border
+.border-none { @include border-none; }
+.border-select { @include border-select; }
+.border-large { @include border-large; }
+.border-medium { @include border-medium; }
+.border-small { @include border-small; }
+.border-thin { @include border-thin; }
+
+// Border X/Y
+.border-small-x { @include border-small-x; }
+.border-medium-x { @include border-medium-x; }
+.border-large-x { @include border-large-x; }
+
+.border-small-y { @include border-small-y; }
+.border-medium-y { @include border-medium-y; }
+.border-large-y { @include border-large-y; }
+
+
+// Border Sides
+.border-small-l { @include border-small-l; }
+.border-medium-l { @include border-medium-l; }
+.border-large-l { @include border-large-l; }
+
+.border-small-r { @include border-small-r; }
+.border-medium-r { @include border-medium-r; }
+.border-large-r { @include border-large-r; }
+
+.border-small-t { @include border-small-t; }
+.border-medium-t { @include border-medium-t; }
+.border-large-t { @include border-large-t; }
+
+.border-small-b { @include border-small-b; }
+.border-medium-b { @include border-medium-b; }
+.border-large-b { @include border-large-b; }
+
+// Border Special
+.border-alert, .border-info { @include border-info; }
+.border-alert-small, .border-info-small { @include border-info-small; }
+.border-info-classic { @include border-info-classic; }
+.border-info-classic-small { @include border-info-classic-small; }
+
+// Radius
+.round-none { @include round-none; }
+.round-small { @include round-small; }
+.round-medium { @include round-medium; }
+.round-large { @include round-large; }
+
+.round-small-l { @include round-small-l; }
+.round-medium-l { @include round-medium-l; }
+.round-large-l {@include round-large-l; }
+
+.round-small-r { @include round-small-r; }
+.round-medium-r { @include round-medium-r; }
+.round-large-r {@include round-large-r; }
+
+.round-small-t { @include round-small-t; }
+.round-medium-t { @include round-medium-t; }
+.round-large-t {@include round-large-t; }
+
+.round-small-b { @include round-small-b; }
+.round-medium-b { @include round-medium-b; }
+.round-large-b {@include round-large-b; }
+
+// Drop Shadow
+.shadow { @include shadow; }
+.shadow-large { @include shadow-large; }
+
+// Sizing
+.h-auto { @include h-auto; }
+.w-auto { @include w-auto; }
+
+//Display
+.d-none { @include d-none; }
+.d-block { @include d-block; }
+.d-inline-block { @include d-inline-block; }
+.d-pos-absolute, .d-absolute { @include d-absolute; }
+.d-pos-fixed, .d-fixed { @include d-fixed; }
+.d-pos-sticky, .d-sticky { @include d-sticky; }
+
+// Flexbox > Basic
+.d-flex-column { @include d-flex-column; }
+.d-flex-column-full  { 
+    @include d-flex-column;
+    flex: 1; 
+}
+.d-flex-row { @include d-flex-row; }
+
+// Flexbox > Items
+.d-flex-center-items { @include d-flex-center-items; }
+.d-flex-center-self { @include d-flex-center-self; }
+.d-flex-justify-content {@include d-flex-justify-content; }
+.d-flex-center { @include d-flex-center; }
+
+
+// Float
+.d-float-r { @include d-float-r; }
+.d-float-l { @include d-float-l; }
+
+
+// Button
+.btn { @include btn; }
+
+.btn-outline {
+    @include btn;
+    background-color: transparent;
+}
+
+// Forms
+.form-container { @include form-container; }
+.form-input { @include form-input; }
+.form-option { @include form-option; }
+
+// Text: Size in PX
+.t-10 { @include t-10; }
+.font-12, .t-12 { @include t-12; }
+.font-16, .t-16 { @include t-16; }
+.font-20, .t-20 { @include t-20; }
+.font-24, .t-24 { @include t-24; }
+.font-32, .t-32 { @include t-32; }
+.t-36 { @include t-36 }
+.t-48 { @include t-48 }
+
+// Text: Font styling
+.t-font-reg { @include t-font-reg; }
+.t-font-thin { @include t-font-thin; }
+.t-font-heavy { @include t-font-heavy; }
+
+// Text: Alignment
+.t-center { @include t-center; }
+.t-left { @include t-left; }
+.t-right { @include t-right; }
+
+// <a> tag
+.t-no-hover { @include t-no-hover; }

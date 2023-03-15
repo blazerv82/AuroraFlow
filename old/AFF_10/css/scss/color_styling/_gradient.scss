@@ -1,0 +1,7 @@
+.gradient-ff {
+    border-image: linear-gradient(to top right, $lightgreen, $darkblue) 1;
+}
+
+.gradient-ff-classic {
+    border-image: linear-gradient($lightgreen, $darkblue) 1;
+}

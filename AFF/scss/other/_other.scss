@@ -1,0 +1,28 @@
+// Container/Object: Sizing
+@mixin h-auto { height: 100%; }
+@mixin w-auto { width: 100%; }
+
+
+// Special/Other
+@mixin to-top{
+    @include border-select;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 5px;
+    z-index: 1;
+}
+
+// Containers
+@mixin message-object {
+    width: 100%;
+    display: inline-block;
+    font-size: 32px;
+}
+
+@mixin content-object {
+    @include w-auto;
+    @include px-small;
+    overflow: hidden;
+}

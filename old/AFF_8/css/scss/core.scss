@@ -1,0 +1,293 @@
+/*
+    CORE AFF SCSS / DIGITAL SAHARA V6.1
+    Late October 2019
+    bvtv 2019+
+*/
+
+@import 'padmar';
+@import 'color';
+@import 'sizing';
+
+@import 'addons';
+@import 'forms';
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: none;
+}
+
+
+/*//////
+TOP LEVEL CONTAINERS 
+//////*/
+.spaced-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Medium */
+@media (min-width: 525px) {
+    .spaced-container { max-width: 520px; }
+}
+
+/* Large */
+@media (min-width: 725px) {
+    .spaced-container { max-width: 720px; }
+}
+
+/* Xtra Large */
+@media (min-width: 925px) {
+    .spaced-container { max-width: 920px; }
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container::after, .spaced-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*//////
+SUB CONTAINERS
+//////*/
+
+.content-container { @extend %content-container; }
+.text-container { @extend %content-container; }
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    @include px-large;
+    @include py-large;
+    @include w-auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+@media (min-width: 725px) {
+    
+    .nav-container {
+        @include d-flex-row;
+    }
+
+}
+
+.header-container {
+    @include py-medium;
+    @include font-32;
+    @include w-auto;
+
+    text-align: center;
+    border: none;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+
+.alert-container { @extend %alert-container; }
+
+.code-container {
+    @extend %alert-container;
+    font-family: monospace;
+}
+
+.inline-code-container {
+    @include border-alert-small;
+
+    font-family: monospace;
+
+    padding: 0px 5px;
+    display: inline-block;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 5px;
+    z-index: 1;
+
+    @include border-select;
+}
+
+.badge {
+    @include border-alert-small; 
+    @include px-medium;
+    @include font-16;
+    @include d-float-r;
+    
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+/*//////
+NAV
+//////*/
+.nav-item { @include d-block; }
+.nav-img { @include d-none; }
+
+@media (min-width: 725px) {
+    
+    .nav-item {
+        @include d-inline-block;
+        @include mx-small;
+    }
+
+    .nav-img {
+        @include d-block;
+        height: 25px;
+    }
+}
+
+
+/*//////
+Position
+Grid moved over to _sizing.scss
+//////*/
+
+// Padding X
+.px-none { @include px-none; }
+.px-small { @include px-small; }
+.px-medium { @include px-medium; }
+.px-large { @include px-large; }
+.px-xlarge { @include px-xlarge; }
+
+// Padding Y
+.py-none { @include py-none; }
+.py-small { @include py-small; }
+.py-medium { @include py-medium; }
+.py-large { @include py-large; }
+.py-xlarge { @include py-xlarge; }
+
+// Margin X
+.mx-none { @include mx-none; }
+.mx-small { @include mx-small; }
+.mx-medium { @include mx-medium; }
+.mx-large { @include mx-large; }
+.mx-xlarge { @include mx-xlarge; }
+
+// Margin Y
+.my-none { @include my-none; }
+.my-small { @include my-small; }
+.my-medium { @include my-medium; }
+.my-large { @include my-large; }
+.my-xlarge { @include my-xlarge; }
+
+
+// Border
+/////////
+
+.border-none { @include border-none; }
+.border-select { @include border-select; }
+.border-alert { @include border-alert; }
+.border-alert-small { @include border-alert-small; }
+.border-large { @include border-large; }
+.border-medium { @include border-medium; }
+.border-small { @include border-small; }
+
+
+// Radius
+.border-round-none { @include border-round-none; }
+.border-round { @include border-round; }
+.border-round-large { @include border-round-large; }
+
+
+
+
+// Other
+////////
+
+// Drop Shadow
+.shadow { box-shadow: 0px 0px 5px $black; }
+.shadow-large { box-shadow: 0px 0px 10px $black; }
+
+
+// Sizing
+.h-auto { @include h-auto; }
+.w-auto { @include w-auto; }
+
+
+//Display
+.d-none { @include d-none; }
+
+.d-block { @include d-block; }
+.d-inline-block { @include d-inline-block; }
+
+.d-flex-column { @include d-flex-column; }
+.d-flex-row { @include d-flex-row; }
+
+.d-flex-center-all { @include d-flex-center-all; }
+.d-flex-center-all-s { @include d-flex-center-all-s; }
+.d-flex-center-self { @include d-flex-center-self; }
+
+.d-flex-justify-all {@include d-flex-justify-all; }
+
+.d-float-r { @include d-float-r; }
+.d-float-l { @include d-float-l; }
+
+.d-pos-absolute { @include d-pos-absolute; }
+.d-pos-fixed { @include d-pos-fixed; }
+.d-pos-sticky { @include d-pos-sticky; }
+
+
+// Button
+.btn { @extend %btn; }
+
+.btn-outline {
+    @extend %btn;
+    background-color: transparent;
+}
+
+// Forms
+.form-input { @extend %form-input; }
+.form-option { @extend %form-option; }
+
+
+// Font
+.font-12 { @include font-12; }
+.font-16 { @include font-16; }
+.font-20 { @include font-20; }
+.font-24 { @include font-24; }
+.font-32 { @include font-32; }

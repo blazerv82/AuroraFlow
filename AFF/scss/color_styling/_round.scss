@@ -1,0 +1,66 @@
+// Radius
+@mixin round-none { border-radius: 0em; }
+@mixin round-small { border-radius: 0.25em; }
+@mixin round-medium { border-radius: 0.5em; }
+@mixin round-large { border-radius: 1em; }
+@mixin round-circle { border-radius: 100%; }
+
+@mixin round-small-l { 
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em; 
+}
+
+@mixin round-medium-l { 
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em; 
+}
+
+@mixin round-large-l {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em; 
+}
+
+@mixin round-small-r { 
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em; 
+}
+
+@mixin round-medium-r { 
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em; 
+}
+
+@mixin round-large-r {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em; 
+}
+
+@mixin round-small-t { 
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em; 
+}
+
+@mixin round-medium-t { 
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em; 
+}
+
+@mixin round-large-t {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em; 
+}
+
+@mixin round-small-b { 
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em; 
+}
+
+@mixin round-medium-b { 
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em; 
+}
+
+@mixin round-large-b {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em; 
+}

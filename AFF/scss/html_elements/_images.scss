@@ -1,0 +1,3 @@
+@mixin h-50-per { height: 50%; }
+
+.h-50-per { @include h-50-per; }

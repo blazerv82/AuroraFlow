@@ -1,0 +1,290 @@
+/*//////
+BASIC 
+//////*/
+
+/* 
+VIEWPORT 
+--vs: [DEFAULT] under 525px;
+--vm: 525 to 725px;
+--vl: 725 to 925px;
+--vxl: 925 and over;
+*/
+@import 'color';
+@import 'sizing';
+@import 'padmar';
+@import 'addons';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: none;
+}
+
+
+/*//////
+TOP LEVEL CONTAINERS 
+//////*/
+.spaced-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Medium */
+@media (min-width: 525px) {
+    .spaced-container { max-width: 520px; }
+}
+
+/* Large */
+@media (min-width: 725px) {
+    .spaced-container { max-width: 720px; }
+}
+
+/* Xtra Large */
+@media (min-width: 925px) {
+    .spaced-container { max-width: 920px; }
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container::after, .spaced-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*//////
+SUB CONTAINERS
+//////*/
+
+.content-container {
+    padding: 0.25em;
+    width: 100%;
+}
+
+.text-container {
+    padding: 0em 1em;
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    padding: 1em;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    
+}
+
+@media (min-width: 725px) {
+    
+    .nav-container {
+        @include d-flex-row;
+    }
+
+}
+
+.header-container {
+    padding: 0.5em 0.5em;
+    font-size: 24px;
+    text-align: center;
+
+    border: none;
+    border-bottom-style: solid;
+    border-top-style: solid;
+
+    width: 100%;
+}
+
+.alert-container {
+    @extend %alert-container;
+}
+
+.code-container {
+    @extend %alert-container;
+    
+    font-family: monospace;
+    text-align: left;
+}
+
+.inline-code-container {    
+    font-family: monospace;
+    text-align: left;
+
+    display: inline-block;
+    
+    border-style: solid;
+
+    border-width: 1px 3px;
+
+    border-radius: 0.25em;
+
+    padding: 0px 5px;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 5px;
+    z-index: 1;
+
+    border-style: solid;
+    border-bottom-style: none;
+    border-width: 1px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+/*//////
+NAV
+//////*/
+.nav-item {
+    @include d-block;
+}
+
+.nav-img {
+    @include d-none;
+}
+
+
+@media (min-width: 725px) {
+    
+    .nav-item {
+        @include d-inline-block;
+        @include mx-small;
+    }
+
+    .nav-img {
+        @include d-block;
+        height: 25px;
+    }
+}
+
+
+/*//////
+Position
+Grid moved over to _sizing.scss
+//////*/
+
+// Padding X
+.px-none { @include px-none; }
+.px-small { @include px-small; }
+.px-medium { @include px-medium; }
+.px-large { @include px-large; }
+.px-xlarge { @include px-xlarge; }
+
+// Padding Y
+.py-none { @include py-none; }
+.py-small { @include py-small; }
+.py-medium { @include py-medium; }
+.py-large { @include py-large; }
+.py-xlarge { @include py-xlarge; }
+
+// Margin X
+.mx-none { @include mx-none; }
+.mx-small { @include mx-small; }
+.mx-medium { @include mx-medium; }
+.mx-large { @include mx-large; }
+.mx-xlarge { @include mx-xlarge; }
+
+// Margin Y
+.my-none { @include my-none; }
+.my-small { @include my-small; }
+.my-medium { @include my-medium; }
+.my-large { @include my-large; }
+.my-xlarge { @include my-xlarge; }
+
+
+// Border
+/////////
+
+.border-none { @include border-none; }
+.border-alert { @include border-alert; }
+.border-alert-small { @include border-alert-small; }
+.border-large { @include border-large; }
+.border-medium { @include border-medium; }
+.border-small { @include border-small; }
+
+
+// Radius
+.border-round-none { @include border-round-none; }
+.border-round { @include border-round; }
+.border-round-large { @include border-round-large; }
+
+
+
+
+// Other
+////////
+
+// Drop Shadow
+.shadow { box-shadow: 0px 0px 5px $black; }
+.shadow-large { box-shadow: 0px 0px 10px $black; }
+
+
+// Sizing
+.h-auto { @include h-auto; }
+.w-auto { @include w-auto; }
+
+
+//Display
+.d-block { @include d-block; }
+.d-inline-block { @include d-inline-block; }
+.d-flex-column { @include d-flex-column; }
+.d-flex-row { @include d-flex-row; }
+
+
+// Button
+.btn { @extend %btn; }
+
+.btn-outline {
+    @extend %btn;
+    background-color: transparent;
+}
+
+
+// Font
+.font-16 { @include font-16; }
+.font-20 { @include font-20; }
+.font-24 { @include font-24; }

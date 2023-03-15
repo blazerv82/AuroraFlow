@@ -1,0 +1,76 @@
+// Top LvL Container
+@mixin form-container {
+    @include d-flex-column;
+    @include t-20;
+
+    .form-object {
+        @include px-small;
+        @include py-small;
+    }
+}
+
+// Input
+@mixin form-input {
+    @include border-thin;
+    @include round-small;
+    @include w-auto;
+    
+    border-color: $primary;
+    padding: 0.5em;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+    &:hover {
+        border-color: rgba($black, 0.85);
+    }
+
+    &:focus {
+        border-color: rgba($black, 0.75);
+    }
+}
+
+@mixin form-option {
+
+    select {
+        @include border-thin;
+        @include round-medium-t;
+        @include w-auto;
+
+        padding: 0.5em;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+        display: block;
+        background-image: none;
+        -ms-word-break: normal;
+        word-break: normal;
+
+        &:hover {
+            border-color: rgba($black, 0.75);
+        }
+
+        &:focus {
+            border-color: rgba($black, 0.75);
+        }
+    }
+}
+
+
+// Button
+@mixin btn {
+    @include border-thin;
+    @include round-medium;
+
+    font-size: 16px;
+    padding: 0.5em;
+    margin-left: .1em;
+    margin-right: .1em;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+    &:hover {
+        border-color: rgba($black, 0.75);
+        color: rgba($black, 1);
+    }
+
+    &:focus {
+        background-color: rgba($black, 0.5);
+    }
+}

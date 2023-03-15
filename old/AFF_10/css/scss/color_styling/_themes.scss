@@ -1,0 +1,377 @@
+// Light / Dark
+.theme-light {
+
+    background-color: darken($color: $white, $amount: 5);
+    color: $black;
+    border-color: darken($color: $white, $amount: 30);
+
+    a {
+        color: $black;
+    }
+
+    a:hover {
+        color: darken($color: $white, $amount: 20);
+    }
+
+    hr {
+        border-color: darken($color: $white, $amount: 30);
+    }
+
+    .nav-item:hover {
+        background-color: darken($color: $white, $amount: 30);
+        color: darken($color: $white, $amount: 10);
+    }
+
+    .active {
+        background-color: darken($color: $white, $amount: 30);
+    }
+}
+
+.theme-dark {
+
+    background-color: lighten($color: $black, $amount: 10);
+    color: $white;
+    border-color: lighten($color: $black, $amount: 30);
+
+    a {
+        color: $white;
+    }
+
+    a:hover {
+        color: darken($color: $white, $amount: 50);
+    }
+
+    hr {
+        border-color: lighten($color: $black, $amount: 30);
+    }
+
+    .nav-item:hover {
+        background-color: lighten($color: $black, $amount: 30);
+        color: darken($color: $white, $amount: 20);
+    }
+
+    .active {
+        background-color: lighten($color: $black, $amount: 30);
+    }
+}
+
+// Light / Dark High Contrast
+.theme-light-hc {
+
+    background-color: $white;
+    color: $black;
+    border-color: $black;
+
+    a {
+        color: $black;
+    }
+
+    a:hover {
+        color: darken($color: $white, $amount: 20);
+    }
+
+    hr {
+        border-color: $black;
+    }
+
+    .nav-item:hover {
+        background-color: darken($color: $white, $amount: 100);
+        color: darken($color: $white, $amount: 20);
+    }
+
+    .active {
+        background-color: darken($color: $white, $amount: 100);
+    }
+}
+
+.theme-dark-hc {
+
+    background-color: $black;
+    color: $white;
+    border-color: $white;
+
+    a {
+        color: $white;
+    }
+
+    a:hover {
+        color: darken($color: $white, $amount: 50);
+    }
+
+    hr {
+        border-color: $white;
+    }
+
+    .nav-item:hover {
+        background-color: lighten($color: $black, $amount: 100);
+        color: darken($color: $white, $amount: 100);
+    }
+
+    .active {
+        background-color: lighten($color: $black, $amount: 100);
+    }
+}
+
+
+// Primary / Secondary
+.theme-primary {
+    
+    background-color: $primary;
+    color: $black;
+    border-color: lighten($color: $black, $amount: 30);
+
+    a {
+        color: $black;
+    }
+
+    a:hover {
+        color: darken($color: $white, $amount: 20);
+    }
+
+    hr {
+        border-color: lighten($color: $black, $amount: 30);
+    }
+
+    .nav-item:hover {
+        background-color: lighten($color: $black, $amount: 30);
+        color: darken($color: $white, $amount: 20);
+    }
+
+    .active {
+        background-color: lighten($color: $black, $amount: 30);
+    }
+}
+
+.theme-secondary {
+    
+    background-color: $secondary;
+    color: $white;
+    border-color: lighten($color: $black, $amount: 30);
+
+    a {
+        color: $white;
+    }
+
+    a:hover {
+        color: darken($color: $white, $amount: 50);
+    }
+
+    hr {
+        border-color: lighten($color: $black, $amount: 30);
+    }
+
+    .nav-item:hover {
+        background-color: lighten($color: $black, $amount: 30);
+        color: darken($color: $white, $amount: 15);
+    }
+
+    .active {
+        background-color: lighten($color: $black, $amount: 30);
+    }
+}
+
+// Context
+.theme-success {
+    
+    background-color: $lightgreen;
+    color: $black;
+    border-color: darken($color: $lightgreen, $amount: 30);
+
+    a {
+        color: $darkgreen;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: darken($color: $lightgreen, $amount: 30);
+    }
+
+    .nav-item:hover {
+        background-color: darken($color: $lightgreen, $amount: 30);
+        color: $black;
+    }
+
+    .active {
+        background-color: lighten($color: $lightgreen, $amount: 20);
+    }
+}
+
+.theme-info {
+    
+    background-color: $lightcyan;
+    color: $black;
+    border-color: darken($color: $lightcyan, $amount: 30);
+
+    a {
+        color: $darkcyan;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: darken($color: $lightcyan, $amount: 30);
+    }
+
+    .nav-item:hover {
+        background-color: darken($color: $lightcyan, $amount: 30);
+        color: $black;
+    }
+
+    .active {
+        background-color: darken($color: $lightcyan, $amount: 30);
+    }
+}
+
+.theme-warning {
+    
+    background-color: $lightred;
+    color: $black;
+    border-color: darken($color: $lightred, $amount: 30);
+
+    a {
+        color: $darkred;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: darken($color: $lightred, $amount: 30);
+    }
+
+    .nav-item:hover {
+        background-color: darken($color: $lightred, $amount: 30);
+        color: $black;
+    }
+
+    .active {
+        background-color: lighten($color: $lightred, $amount: 20);
+    }
+}
+
+.theme-danger {
+    
+    background-color: $lightorange;
+    color: $black;
+    border-color: darken($color: $lightorange, $amount: 30);
+
+    a {
+        color: $brown;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: darken($color: $lightorange, $amount: 30);
+    }
+
+    .nav-item:hover {
+        background-color: darken($color: $lightorange, $amount: 30);
+        color: $black;
+    }
+
+    .active {
+        background-color: lighten($color: $lightorange, $amount: 20);
+    }
+}
+
+// Digital Black
+.theme-digitalblack {
+
+    background-color: $black;
+    color: $green;
+    border-color: $green;
+
+    font-family: monospace;
+
+    a {
+        color: $green;
+    }
+
+    a:hover {
+        color: $darkgreen;
+    }
+
+    hr {
+        border-color: $green;
+    }
+}
+
+// Vapor
+.theme-vapor {
+
+    background-color: $black;
+    color: $cyan;
+    border-color: $purple;
+
+    font-family: monospace;
+    letter-spacing: 0.15em;
+
+    a {
+        color: $cyan;
+    }
+
+    a:hover {
+        color: $darkcyan;
+    }
+
+    hr {
+        border-color: $purple;
+    }
+}
+
+// Sunset Infinity
+.theme-si {
+
+    background-color: $white;
+    color: $orange;
+    border-color: $orange;
+
+    a {
+        color: $brown;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: $orange;
+    }
+}
+
+// Cosmic Voltage
+.theme-cv {
+    background-color: $secondary;
+    color: $yellow;
+    border-color: $yellow;
+
+    a {
+        color: $lightyellow;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: $yellow;
+    }
+
+    .nav-item:hover {
+        background-color: $yellow;
+        color: $black;
+    }
+
+    .active {
+        background-color: $yellow;
+    }
+}

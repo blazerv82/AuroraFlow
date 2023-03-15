@@ -1,0 +1,165 @@
+// Borders
+@mixin border-solid { border-style: solid; }
+@mixin border-none { border-style: none !important; }
+
+//Border Sides
+@mixin border-x { border-style: none solid; }
+@mixin border-y { border-style: solid none; }
+
+@mixin border-r { border-style: none solid none none; }
+@mixin border-l { border-style: none none none solid; }
+@mixin border-t { border-style: solid none none none; }
+@mixin border-b { border-style: none none solid none; }
+
+
+// Basic
+@mixin border-large {
+    @include border-solid;
+    border-width: 1em;
+}
+
+@mixin border-medium {
+    @include border-solid;
+    border-width: 0.5em;
+}
+
+@mixin border-small {
+    @include border-solid;
+    border-width: 0.25em;
+}
+
+@mixin border-thin {
+    @include border-solid;
+    border-width: 1px;
+}
+
+// Side L
+@mixin border-small-l {
+    @include border-l;
+    border-width: 0.25em;
+    
+}
+@mixin border-medium-l {
+    @include border-l;
+    border-width: 0.5em;
+}
+
+@mixin border-large-l {
+    @include border-l;
+    border-width: 1em;
+}
+
+// Side R
+@mixin border-small-r {
+    @include border-r;
+    border-width: 0.25em;
+    
+}
+@mixin border-medium-r {
+    @include border-r;
+    border-width: 0.5em;
+}
+
+@mixin border-large-r {
+    @include border-r;
+    border-width: 1em;
+}
+
+// Side T
+@mixin border-small-t {
+    @include border-t;
+    border-width: 0.25em;
+    
+}
+@mixin border-medium-t {
+    @include border-t;
+    border-width: 0.5em;
+}
+
+@mixin border-large-t {
+    @include border-t;
+    border-width: 1em;
+}
+
+// Side B
+@mixin border-small-b {
+    @include border-b;
+    border-width: 0.25em;
+    
+}
+@mixin border-medium-b {
+    @include border-b;
+    border-width: 0.5em;
+}
+
+@mixin border-large-b {
+    @include border-b;
+    border-width: 1em;
+}
+
+// X Axis
+@mixin border-large-x {
+    @include border-x;
+    border-width: 1em;
+}
+
+@mixin border-medium-x {
+    @include border-x;
+    border-width: 0.5em;
+}
+
+@mixin border-small-x {
+    @include border-x;
+    border-width: 0.25em;
+}
+
+// Y Axis
+@mixin border-large-y {
+    @include border-y;
+    border-width: 1em;
+}
+
+@mixin border-medium-y {
+    @include border-y;
+    border-width: 0.5em;
+}
+
+@mixin border-small-y {
+    @include border-y;
+    border-width: 0.25em;
+}
+
+// Specialty
+@mixin border-info {
+    border-style: solid;
+    border-width: 3px 10px;
+    border-radius: 0.25em;
+}
+
+@mixin border-info-small {
+    border-style: solid;
+    border-width: 1px 3px;
+    border-radius: 0.25em;
+}
+
+@mixin border-info-classic {
+    @include border-l;
+    border-width: 3px 10px;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+
+@mixin border-info-classic-small {
+    @include border-l;
+    border-width: 1px 3px;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+}
+
+@mixin border-select {
+    @include border-solid;
+    
+    border-width: 1px 3px;
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+}

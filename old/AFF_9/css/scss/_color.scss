@@ -1,0 +1,408 @@
+$red: rgb(255, 0, 0);
+$darkred: rgb(125, 0, 0);
+$lightred: rgb(255, 125, 125);
+
+$green: rgb(0, 255, 0);
+$darkgreen: rgb(0, 125, 0);
+$lightgreen: rgb(125, 255, 125);
+
+$blue: rgb(0, 0, 255);
+$darkblue: rgb(0, 0, 125);
+$lightblue: rgb(125, 125, 255);
+
+$cyan: rgb(0, 255, 255);
+$darkcyan: rgb(0, 125, 125);
+$lightcyan: rgb(125, 255, 255);
+
+$yellow: rgb(255, 255, 0);
+$darkyellow: rgb(125, 125, 0);
+$lightyellow: rgb(255, 255, 125);
+$tan: rgb(255, 255, 225);
+
+$pink: rgb(255, 0, 255);
+$purple: rgb(125, 0, 125);
+$orange: rgb(255, 125, 0);
+$brown: rgb(125, 75, 0);
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+$light: rgb(250, 250, 250);
+$dark: rgb(25, 25, 25);
+
+$primary: rgb(230, 230, 230);
+$secondary: rgb(100, 100, 100);
+
+/* TEXT */
+.red { color: $red !important; }
+.darkred { color: $darkred !important; }
+.lightred { color: $lightred !important; }
+
+.green { color: $green !important; }
+.darkgreen { color: $darkgreen !important; }
+.lightgreen { color: $lightgreen !important; }
+
+.blue { color: $blue !important; }
+.darkblue { color: $darkblue !important; }
+.lightblue { color: $lightblue !important; }
+
+.cyan { color: $cyan !important; }
+.darkcyan { color: $darkcyan !important; }
+.lightcyan { color: $lightcyan !important; }
+
+.yellow { color: $yellow !important; }
+.darkyellow { color: $darkyellow !important; }
+.lightyellow { color: $lightyellow !important; }
+.tan { color: $tan !important; }
+
+.pink { color: $pink !important; }
+.purple { color: $purple !important; }
+.orange { color: $orange !important; }
+.brown { color: $brown !important; }
+
+.white { color: $white !important; }
+.black { color: $black !important; }
+
+.light { color: $light !important; }
+.dark { color: $dark !important; }
+
+.primary { color: $primary !important; }
+.secondary { color: $secondary !important; }
+
+/* BACKGROUND */
+.bg-red { background-color: $red !important; }
+.bg-darkred { background-color: $darkred !important; }
+.bg-lightred { background-color: $lightred !important; }
+
+.bg-green { background-color: $green !important; }
+.bg-darkgreen { background-color: $darkgreen !important; }
+.bg-lightgreen { background-color: $lightgreen !important; }
+
+.bg-blue { background-color: $blue !important; }
+.bg-darkblue { background-color: $darkblue !important; }
+.bg-lightblue { background-color: $lightblue !important; }
+
+.bg-cyan { background-color: $cyan !important; }
+.bg-darkcyan { background-color: $darkcyan !important; }
+.bg-lightcyan { background-color: $lightcyan !important; }
+
+.bg-yellow { background-color: $yellow !important; }
+.bg-darkyellow { background-color: $darkyellow !important; }
+.bg-lightyellow { background-color: $lightyellow !important; }
+.bg-tan { background-color: $tan !important; }
+
+.bg-pink { background-color: $pink !important; }
+.bg-purple { background-color: $purple !important; }
+.bg-orange { background-color: $orange !important; }
+.bg-brown { background-color: $brown !important; }
+
+.bg-white { background-color: $white !important; }
+.bg-black { background-color: $black !important; }
+
+.bg-light { background-color: $light !important; }
+.bg-dark { background-color: $dark !important; }
+
+.bg-primary { background-color: $primary !important; }
+.bg-secondary { background-color: $secondary !important; }
+
+/* BORDER */
+.border-red { border-color: $red !important; }
+.border-darkred { border-color: $darkred !important; }
+.border-lightred { border-color: $lightred !important; }
+
+.border-green { border-color: $green !important; }
+.border-darkgreen { border-color: $darkgreen !important; }
+.border-lightgreen { border-color: $lightgreen !important; }
+
+.border-blue { border-color: $blue !important; }
+.border-darkblue { border-color: $darkblue !important; }
+.border-lightblue { border-color: $lightblue !important; }
+
+.border-cyan { border-color: $cyan !important; }
+.border-darkcyan { border-color: $darkcyan !important; }
+.border-lightcyan { border-color: $lightcyan !important; }
+
+.border-yellow { border-color: $yellow !important; }
+.border-darkyellow { border-color: $darkyellow !important; }
+.border-lightyellow { border-color: $lightyellow !important; }
+.border-tan { border-color: $tan !important; }
+
+.border-pink { border-color: $pink !important; }
+.border-purple { border-color: $purple !important; }
+.border-orange { border-color: $orange !important; }
+.border-brown { border-color: $brown !important; }
+
+.border-white { border-color: $white !important; }
+.border-black { border-color: $black !important; }
+
+.border-light { border-color: $light !important; }
+.border-dark { border-color: $dark !important; }
+
+.border-primary { border-color: $primary !important; }
+.border-secondary { border-color: $secondary !important; }
+
+
+// Light / Dark
+
+.theme-light {
+
+    background-color: $light;
+    color: $black;
+    border-color: $secondary;
+
+    a {
+        color: $black;
+    }
+
+    a:hover {
+        color: $secondary;
+    }
+
+    hr {
+        border-color: $secondary;
+    }
+}
+
+.theme-dark {
+
+    background-color: $dark;
+    color: $white;
+    border-color: $secondary;
+
+    a {
+        color: $white;
+    }
+
+    a:hover {
+        color: $secondary;
+    }
+
+    hr {
+        border-color: $secondary;
+    }
+}
+
+// Light / Dark High Contrast
+.theme-light-hc {
+
+    background-color: $white;
+    color: $black;
+    border-color: $black;
+
+    a {
+        color: $black;
+    }
+
+    a:hover {
+        color: $secondary;
+    }
+
+    hr {
+        border-color: $black;
+    }
+}
+
+.theme-dark-hc {
+
+    background-color: $black;
+    color: $white;
+    border-color: $white;
+
+    a {
+        color: $white;
+    }
+
+    a:hover {
+        color: $secondary;
+    }
+
+    hr {
+        border-color: $white;
+    }
+}
+
+
+// Primary / Secondary
+.theme-primary {
+    
+    background-color: $primary;
+    color: $black;
+    border-color: $black;
+
+    a {
+        color: $dark;
+    }
+
+    a:hover {
+        color: $secondary;
+    }
+
+    hr {
+        border-color: $black;
+    }
+}
+
+.theme-secondary {
+    
+    background-color: $secondary;
+    color: $white;
+    border-color: $white;
+
+    a {
+        color: $dark;
+    }
+
+    a:hover {
+        color: $light;
+    }
+
+    hr {
+        border-color: $white;
+    }
+}
+
+// Context
+
+.theme-success {
+    
+    background-color: $green;
+    color: $black;
+    border-color: $darkgreen;
+
+    a {
+        color: $darkgreen;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: $darkgreen;
+    }
+}
+
+.theme-info {
+    
+    background-color: $cyan;
+    color: $black;
+    border-color: $darkcyan;
+
+    a {
+        color: $darkcyan;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: $darkcyan;
+    }
+}
+
+.theme-warning {
+    
+    background-color: $red;
+    color: $black;
+    border-color: $darkred;
+
+    a {
+        color: $darkred;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: $darkred;
+    }
+}
+
+.theme-danger {
+    
+    background-color: $orange;
+    color: $black;
+    border-color: $brown;
+
+    a {
+        color: $brown;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: $brown;
+    }
+}
+
+// Digital Black
+
+.theme-digitalblack {
+
+    background-color: $black;
+    color: $green;
+    border-color: $green;
+
+    font-family: monospace;
+
+    a {
+        color: $green;
+    }
+
+    a:hover {
+        color: $darkgreen;
+    }
+
+    hr {
+        border-color: $green;
+    }
+}
+
+// Vapor
+
+.theme-vapor {
+
+    background-color: $black;
+    color: $cyan;
+    border-color: $pink;
+
+    font-family: monospace;
+    letter-spacing: 0.15em;
+
+    a {
+        color: $cyan;
+    }
+
+    a:hover {
+        color: $darkcyan;
+    }
+
+    hr {
+        border-color: $pink;
+    }
+}
+
+// Sunset Infinity
+
+.theme-si {
+
+    background-color: $white;
+    color: $orange;
+    border-color: $orange;
+
+    a {
+        color: $brown;
+    }
+
+    a:hover {
+        color: $black;
+    }
+
+    hr {
+        border-color: $orange;
+    }
+}

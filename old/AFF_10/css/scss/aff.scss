@@ -1,0 +1,26 @@
+// AFF_CORE
+// Imports all SCSS files
+// TransVoltt 2019 and beyond
+
+// Normalize.CSS
+@import 'normalize/normalize';
+
+// Sizing
+@import 'sizing/padmar';
+@import 'sizing/viewport';
+
+// Color and Styling
+@import 'color_styling/text-fonts';
+@import 'color_styling/color';
+@import 'color_styling/themes';
+@import 'color_styling/border';
+@import 'color_styling/gradient';
+@import 'color_styling/animations';
+
+// Other random oddities
+@import 'other/addons';
+@import 'other/badge';
+@import 'other/forms';
+
+// Frontend class hooks, w/ basic sitewide styling
+@import 'other/core';

@@ -1,0 +1,242 @@
+// Borders
+@mixin border-solid { border-style: solid; }
+@mixin border-none { border-style: none; }
+@mixin border-reset-all {
+    border-style: none;
+    border-radius: none;
+}
+
+//Border Sides
+@mixin border-x { border-style: none solid; }
+@mixin border-y { border-style: solid none; }
+
+@mixin border-r { border-style: none solid none none; }
+@mixin border-l { border-style: none none none solid; }
+@mixin border-t { border-style: solid none none none; }
+@mixin border-b { border-style: none none solid none; }
+
+
+// Basic
+@mixin border-large {
+    @include border-solid;
+    border-width: 1em;
+}
+
+@mixin border-medium {
+    @include border-solid;
+    border-width: 0.5em;
+}
+
+@mixin border-small {
+    @include border-solid;
+    border-width: 0.25em;
+}
+
+@mixin border-thin {
+    @include border-solid;
+    border-width: 1px;
+}
+
+// Side L
+@mixin border-small-l {
+    @include border-l;
+    border-width: 0.25em;
+}
+
+@mixin border-thin-l {
+    @include border-l;
+    border-width: 1px;
+}
+
+@mixin border-medium-l {
+    @include border-l;
+    border-width: 0.5em;
+}
+
+@mixin border-large-l {
+    @include border-l;
+    border-width: 1em;
+}
+
+// Side R
+@mixin border-small-r {
+    @include border-r;
+    border-width: 0.25em;
+}
+
+@mixin border-thin-r {
+    @include border-r;
+    border-width: 1px;
+}
+
+@mixin border-medium-r {
+    @include border-r;
+    border-width: 0.5em;
+}
+
+@mixin border-large-r {
+    @include border-r;
+    border-width: 1em;
+}
+
+// Side T
+@mixin border-small-t {
+    @include border-t;
+    border-width: 0.25em;
+}
+
+@mixin border-thin-t {
+    @include border-t;
+    border-width: 1px;
+}
+
+@mixin border-medium-t {
+    @include border-t;
+    border-width: 0.5em;
+}
+
+@mixin border-large-t {
+    @include border-t;
+    border-width: 1em;
+}
+
+// Side B
+@mixin border-small-b {
+    @include border-b;
+    border-width: 0.25em;  
+}
+
+@mixin border-thin-b {
+    @include border-b;
+    border-width: 1px;
+}
+
+@mixin border-medium-b {
+    @include border-b;
+    border-width: 0.5em;
+}
+
+@mixin border-large-b {
+    @include border-b;
+    border-width: 1em;
+}
+
+// X Axis
+@mixin border-large-x {
+    @include border-x;
+    border-width: 1em;
+}
+
+@mixin border-medium-x {
+    @include border-x;
+    border-width: 0.5em;
+}
+
+@mixin border-small-x {
+    @include border-x;
+    border-width: 0.25em;
+}
+
+@mixin border-thin-x {
+    @include border-x;
+    border-width: 1px;
+}
+
+// Y Axis
+@mixin border-large-y {
+    @include border-y;
+    border-width: 1em;
+}
+
+@mixin border-medium-y {
+    @include border-y;
+    border-width: 0.5em;
+}
+
+@mixin border-small-y {
+    @include border-y;
+    border-width: 0.25em;
+}
+
+@mixin border-thin-y {
+    @include border-y;
+    border-width: 1px;
+}
+
+// Specialty
+@mixin border-info {
+    border-style: solid;
+    border-width: 3px 10px;
+    border-radius: 0.25em;
+}
+
+@mixin border-info-small {
+    border-style: solid;
+    border-width: 1px 3px;
+    border-radius: 0.25em;
+}
+
+@mixin border-info-classic {
+    @include border-solid;
+    border-width: 1px 1px 1px 10px;
+}
+
+@mixin border-info-classic-small {
+    @include border-solid;
+    color: $darkred;
+    border-color: $black;
+    border-width: 1px 1px 1px 5px;
+}
+
+@mixin border-select {
+    border-width: 1px 3px;
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+}
+
+// Border
+.border-none { @include border-none; }
+.border-select { @include border-select; }
+.border-large { @include border-large; }
+.border-medium { @include border-medium; }
+.border-small { @include border-small; }
+.border-thin { @include border-thin; }
+
+// Border X/Y
+.border-small-x { @include border-small-x; }
+.border-thin-x { @include border-thin-x; }
+.border-medium-x { @include border-medium-x; }
+.border-large-x { @include border-large-x; }
+
+.border-small-y { @include border-small-y; }
+.border-thin-y { @include border-thin-y; }
+.border-medium-y { @include border-medium-y; }
+.border-large-y { @include border-large-y; }
+
+
+// Border Sides
+.border-small-l { @include border-small-l; }
+.border-thin-l { @include border-thin-l; }
+.border-medium-l { @include border-medium-l; }
+.border-large-l { @include border-large-l; }
+
+.border-small-r { @include border-small-r; }
+.border-thin-r { @include border-thin-r; }
+.border-medium-r { @include border-medium-r; }
+.border-large-r { @include border-large-r; }
+
+.border-small-t { @include border-small-t; }
+.border-thin-t { @include border-thin-t; }
+.border-medium-t { @include border-medium-t; }
+.border-large-t { @include border-large-t; }
+
+.border-small-b { @include border-small-b; }
+.border-thin-b { @include border-thin-b; }
+.border-medium-b { @include border-medium-b; }
+.border-large-b { @include border-large-b; }
+
+// Border Special
+.border-alert, .border-info { @include border-info; }
+.border-alert-small, .border-info-small { @include border-info-small; }
+.border-info-classic { @include border-info-classic; }
+.border-info-classic-small { @include border-info-classic-small; }

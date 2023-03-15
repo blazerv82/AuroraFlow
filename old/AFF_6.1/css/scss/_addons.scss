@@ -1,0 +1,84 @@
+// Mixins
+/////////
+
+// Borders
+@mixin border-solid { border-style: solid; }
+@mixin border-none { border-style: none; }
+@mixin border-round-none { border-radius: 0px; }
+@mixin border-round { border-radius: 10px; }
+@mixin border-round-large { border-radius: 25px; }
+
+@mixin border-large {
+    @include border-solid;
+    border-width: 5px;
+}
+
+@mixin border-medium {
+    @include border-solid;
+    border-width: 3px;
+}
+
+@mixin border-small {
+    @include border-solid;
+    border-width: 1px;
+}
+
+@mixin border-alert {
+    border-style: solid;
+    border-width: 3px 10px;
+    border-radius: 0.25em;
+}
+
+@mixin border-alert-small {
+    border-style: solid;
+    border-width: 1px 3px;
+    border-radius: 0.25em;
+}
+
+@mixin border-select {
+    border-style: solid;
+    border-width: 2px 5px;
+    border-top-right-radius: 0.25em;
+    border-top-left-radius: 0.25em;
+}
+
+
+// Display
+@mixin d-block { display: block; }
+@mixin d-inline-block { display: inline-block; }
+@mixin d-none { display: none; }
+@mixin d-flex-column { flex-direction: column; }
+@mixin d-flex-row { flex-direction: row; }
+
+// Sizing
+@mixin h-auto { height: 100%; }
+@mixin w-auto { width: 100%; }
+
+// Font
+@mixin font-16 { font-size: 16px; }
+@mixin font-20 { font-size: 20px; }
+@mixin font-24 { font-size: 24px; }
+
+
+// Partials
+///////////
+
+// Containers
+%alert-container {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0px;
+
+    display: block;
+
+    border-style: solid;
+    border-width: 3px 10px;
+    border-radius: 0.25em;
+
+    font-size: 24px;
+}
+
+%content-container {
+    @include w-auto;
+    @include px-small;
+}

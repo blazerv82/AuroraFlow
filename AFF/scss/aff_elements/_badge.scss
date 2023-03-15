@@ -1,0 +1,25 @@
+.badge-container {
+    display: flex;
+    align-items: center;
+
+    .badge {
+        @include px-medium;
+       
+        display: flex;
+        align-items: center;
+        font-size: smaller;
+        margin-left: auto;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    .badge-small {
+        @include px-small;
+        @include py-small;
+
+        display: flex;
+        align-items: center;
+        font-size: smaller;
+        margin-left: 1em;
+    }
+}

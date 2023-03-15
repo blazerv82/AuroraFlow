@@ -1,0 +1,42 @@
+// AFF_CORE
+// Imports all SCSS files
+// TV_Transmissions 2019 and beyond
+
+// Variables
+@import 'other/variables';
+
+// External Libraries
+@import 'external_libraries/normalize';
+@import 'external_libraries/slick';
+
+// Sizing and Display
+@import 'sizing_display/padmar';
+@import 'sizing_display/viewport';
+@import 'sizing_display/display';
+@import 'sizing_display/position';
+
+// Color and Styling
+@import 'color_styling/text-fonts';
+@import 'color_styling/color';
+@import 'color_styling/themes';
+@import 'color_styling/border';
+@import 'color_styling/round';
+@import 'color_styling/gradient';
+@import 'color_styling/animations';
+@import 'color_styling/shadow';
+
+// AFF Elements
+@import 'aff_elements/badge';
+@import 'aff_elements/tile';
+
+// HTML Elements
+@import 'html_elements/forms';
+@import 'html_elements/images';
+
+// Other un-grouped options
+@import 'other/other';
+
+// ALWAYS LAST IMPORT
+// Frontend class hooks, w/ basic sitewide styling
+@import 'other/core';
+

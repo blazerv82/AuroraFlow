@@ -1,0 +1,45 @@
+// Display
+@mixin d-none { display: none; }
+
+@mixin d-block { display: block; }
+@mixin d-inline-block { display: inline-block; }
+
+@mixin d-float-r { float: right; }
+@mixin d-float-l { float: left; }
+
+@mixin d-absolute { position: absolute; }
+@mixin d-fixed { position: fixed; }
+
+// Sticky Display
+@mixin d-sticky { 
+    position: sticky; 
+    top: 0;
+}
+
+
+// Flex Display
+@mixin d-flex-align-h { align-items: center; }
+@mixin d-flex-center { 
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+@mixin d-flex-column { 
+    display: flex; 
+    flex-direction: column; 
+}
+
+@mixin d-flex-row { 
+    display: flex;
+    flex-direction: row; 
+}
+
+// Slick slider: Force a size of all content
+.slider-item-small {
+    height: 251px;
+}
+
+.slider-item-large {
+    height: 500px;
+}
